@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #eaeef0;
+    }
+    
+    .loding {
+        position: relative;
+        display: flex;
+    }
+    
+    .loding span {
+        position: relative;
+        width: 250px;
+        height: 250px;
+        background: #eaeef0;
+        border: 6px solid #eaeef0;
+        border-radius: 50%;
+        box-shadow: -8px -8px 15px rgba(255, 2555, 255, 1), 8px 8px 25px rgba(0, 0, 0, 0.15);
+    }
+    
+    .loding span::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: 50%;
+        box-shadow: inset 10px 10px 20px rgba(0, 0, 0, 0.5), inset -5px -5px 15px rgba(255, 2555, 255, 1);
+    }
+    
+    .loding span::after {
+        content: '';
+        position: absolute;
+        inset: 40px;
+        border-radius: 50%;
+        border: 3px solid #000000;
+        background: #eaeef0;
+        box-shadow: 0px 0px 25px rgb(255, 255, 255), 8px 8px 25px rgb(0 0 0 / 25%), inset 3px 3px 10px rgb(0 0 0 / 15%), inset -1px -1px 15px rgb(255, 255, 255);
+    }
+    
+    .loding span i {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(#42abff, #ff4f8b, #ffeb3d);
+        filter: blur(5px);
+        border-radius: 50%;
+        animation: rotats 1s linear infinite;
+    }
+    
+    @keyframes rotats {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+    
+    img {
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        z-index: 1;
+        top: 44px;
+        left: 44px;
+        border-radius: 50%;
+    }
+</style>
+
+<body>
+    <div class="loding">
+        <span><img src="./unnamed.gif" alt=""><i></i></span>
+    </div>
+</body>
+
+</html>
